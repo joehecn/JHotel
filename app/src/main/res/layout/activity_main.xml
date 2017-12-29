@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <!-- 标题栏 -->
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/include_title"/>
+
+    <!-- scrollbars: none - 无滚动条 -->
+    <!-- overScrollMode: never - 删除ScrollView拉到尽头（顶部、底部），然后继续拉出现的阴影效果 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_below="@id/include_title"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 背景图 -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg"
+                android:layout_centerHorizontal="true"/>
+
+            <LinearLayout
+                android:id="@+id/layout_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_corner"
+                android:layout_below="@id/imageView"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:paddingBottom="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    android:paddingTop="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="8dp">
+
+                    <!-- 我的位置 -->
+                    <TextView
+                        android:id="@+id/tv_my_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/startlocation"
+                        android:textSize="@dimen/ft"
+                        android:textColor="@color/colorSecondary"
+                        android:drawableLeft="@drawable/ic_my_location"
+                        android:drawablePadding="8dp"
+                        android:background="@drawable/bg_btn"
+                        android:clickable="true"/>
+
+                    <!-- 选择城市 -->
+                    <TextView
+                        android:id="@+id/tv_set_place"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="选择城市"
+                        android:textSize="@dimen/ft"
+                        android:textColor="@color/colorSecondary"
+                        android:drawableLeft="@drawable/ic_place"
+                        android:drawableRight="@drawable/ic_keyboard_arrow_right"
+                        android:drawablePadding="8dp"
+                        android:background="@drawable/bg_btn"
+                        android:clickable="true"/>
+                </LinearLayout>
+
+                <!-- 城市 -->
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="深圳市"
+                    android:textSize="@dimen/ft"
+                    android:textColor="@color/colorImportant"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="40dp"
+                    android:background="@drawable/bg_btn"/>
+
+                <!-- 分割线-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#8c8c8c"/>
+
+                <!-- 选择日期 -->
+                <TextView
+                    android:id="@+id/tv_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12月11日 - 12月12日"
+                    android:textSize="@dimen/ft"
+                    android:textColor="@color/colorImportant"
+                    android:drawableLeft="@drawable/ic_calendar"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right"
+                    android:drawablePadding="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:background="@drawable/bg_btn"
+                    android:clickable="true"/>
+
+                <!-- 分割线-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#8c8c8c"/>
+
+                <!-- 搜索酒店名 -->
+                <TextView
+                    android:id="@+id/tv_keyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="搜索酒店名、地名、地标"
+                    android:textSize="@dimen/ft"
+                    android:textColor="@color/colorSecondary"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right"
+                    android:drawablePadding="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="8dp"
+                    android:background="@drawable/bg_btn"
+                    android:clickable="true"/>
+
+                <!-- 分割线-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#8c8c8c"/>
+
+                <!-- 开始搜索按钮 -->
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_corner_primary"
+                    android:layout_margin="8dp"
+                    android:text="开始搜索"
+                    android:textColor="@color/colorFront"
+                    android:textSize="@dimen/ft"/>
+            </LinearLayout>
+
+            <!-- 保障 承诺 -->
+            <TextView
+                android:id="@+id/tv_promise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/page_main_promise"
+                android:textColor="@color/colorFront"
+                android:textSize="@dimen/ft_xs"
+                android:drawableLeft="@drawable/ic_promise"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:layout_below="@id/layout_main"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_btn"
+                android:clickable="true"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!-- 底栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="#eaeaea">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="首页"
+            android:textSize="@dimen/ft_xs"
+            android:textColor="@color/colorPrimary"
+            android:drawableTop="@drawable/ic_home"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="订单"
+            android:textSize="@dimen/ft_xs"
+            android:textColor="@color/colorSecondary"
+            android:drawableTop="@drawable/ic_order"
+            android:gravity="center"
+            android:background="@drawable/bg_btn"
+            android:clickable="true"/>
+    </LinearLayout>
+
+</RelativeLayout>

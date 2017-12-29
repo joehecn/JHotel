@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/layout_margin"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/promise_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="到店有房, 酒店预定有保障"
+            android:textSize="@dimen/ft"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有问题, 我赔你"
+            android:textSize="@dimen/ft_lg"
+            android:layout_below="@id/promise_title"/>
+
+        <ImageButton
+            android:id="@+id/btn_cancel_dialog"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_close_black"/>
+    </RelativeLayout>
+
+    <!-- 分隔符 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="有房保障：订单确认后官网保证消费者按照订单价格入住，如产生以下情况，承诺相应赔付："/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="* 消费者到店前，酒店（供应商）告知无法安排入住或要求加价入住的，官网将退还全部预订费用（如有），并赔付消费者另行预定注入附近同等酒店房间的差价（不超过订单首晚房费的30%）。"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="* 如有消费者到点无房且协调无果，官网赔付消费者另行预定入住附近同等酒店房间的差价，但最高不超过订单首晚房费。"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="* 请保留酒店的相关凭证（发票+水单）向官网提交赔付申请，在核对凭证无误后官网将赔付差价。"/>
+
+    <!-- 分隔符 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注：如未及时联系官网自行入住其他酒店，视为您放弃了保障计划权利。"/>
+</LinearLayout>

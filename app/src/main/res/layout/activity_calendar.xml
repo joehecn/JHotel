@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <!-- 标题栏 -->
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/include_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:weightSum="7">
+
+        <TextView
+            style="@style/TvWeekEnd"
+            android:text="日" />
+
+        <TextView
+            style="@style/TvWeek"
+            android:text="一" />
+
+        <TextView
+            style="@style/TvWeek"
+            android:text="二" />
+
+        <TextView
+            style="@style/TvWeek"
+            android:text="三" />
+
+        <TextView
+            style="@style/TvWeek"
+            android:text="四" />
+
+        <TextView
+            style="@style/TvWeek"
+            android:text="五" />
+
+        <TextView
+            style="@style/TvWeekEnd"
+            android:text="六" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorFront"
+        android:overScrollMode="never"/>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_margin">16dp</dimen>
+    <dimen name="layout_padding">16dp</dimen>
+    <dimen name="shape_corner">4dp</dimen>
+    <!-- font-size -->
+    <dimen name="ft_lg">20sp</dimen>
+    <dimen name="ft">18sp</dimen>
+    <dimen name="ft_sm">16sp</dimen>
+    <dimen name="ft_xs">14sp</dimen>
+</resources>

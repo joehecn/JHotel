@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/layout_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/promise_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="为了阻止机器人, 请您输入验证码:"/>
+
+    <LinearLayout
+        android:id="@+id/wrap_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_below="@id/promise_title">
+
+        <ImageView
+            android:id="@+id/iv_code"
+            android:layout_width="120dp"
+            android:layout_height="30dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_refresh"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="textNoSuggestions"
+        android:layout_below="@id/wrap_code"/>
+
+    <Button
+        android:id="@+id/btn_submit_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="验证"
+        android:layout_below="@id/et_code"/>
+
+</RelativeLayout>
